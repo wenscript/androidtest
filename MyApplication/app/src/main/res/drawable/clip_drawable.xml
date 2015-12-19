@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这个地方就是具体参数使用-->
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left"
+    android:drawable="@mipmap/beauty"
+    android:clipOrientation="horizontal"/>
