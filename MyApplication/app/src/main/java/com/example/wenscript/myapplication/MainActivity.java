@@ -1,6 +1,7 @@
 package com.example.wenscript.myapplication;
 
 import android.graphics.drawable.ClipDrawable;
+import android.graphics.drawable.RotateDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,17 +13,19 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     /*
-    本例讲的是ClipDrawable的使用
+    本例讲的是ClipDrawable的使用、RotateDrawable、AnimationDrawable
      */
     private ImageView imageView;
     private int level=0;
     private ClipDrawable cd;
+    private RotateDrawable rd;
     private Handler handler=new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (msg.what==0x1234){
-                cd.setLevel(level);
+//                cd.setLevel(level);
+                rd.setLevel(level);
             }
         }
     };
@@ -31,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView= (ImageView) findViewById(R.id.beauty);
-        cd= (ClipDrawable) imageView.getDrawable();
+//        cd= (ClipDrawable) imageView.getDrawable();
+        rd= (RotateDrawable) imageView.getDrawable();
         final Timer timer=new Timer();
         timer.schedule(new TimerTask() {
             @Override
