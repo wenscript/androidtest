@@ -1,1 +1,1 @@
-include ':app', ':layerDrawableTest'
+include ':app', ':layerDrawableTest', ':bitmapTest'
